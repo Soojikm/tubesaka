@@ -4,6 +4,7 @@ const mainpage = document.getElementById("page1");
 const page2 = document.getElementById("page2");
 
 document.getElementById("btnStart").onclick = () => {
+  document.body.classList.add("after-click");
   mainpage.style.display = "none";
   page2.style.display = "block";
 };
@@ -108,8 +109,6 @@ function rataRekursif(arr) {
    HITUNG & BANDINGKAN
 ========================= */
 function hitungDanBandingkan() {
-  page2.classList.remove("before");
-  page2.classList.add("after");
   const data = ambilData();
   if (data != null) {
     let start = performance.now();
@@ -137,8 +136,8 @@ function hitungDanBandingkan() {
    GRAFIK RUNNING TIME
 ========================= */
 function grafikIteratifVsRekursif() {
-  const sizes = [100, 500, 1000, 5000, 10000];
-  const repeat = 500;
+  const sizes = [100, 2000, 4000, 6000, 8000, 10000];
+  const repeat = 5000;
   let iterTimes = [];
   let rekTimes = [];
 
