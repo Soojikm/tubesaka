@@ -122,22 +122,29 @@ function hitungDanBandingkan() {
    GRAFIK RUNNING TIME
 ========================= */
 function grafikIteratifVsRekursif() {
-    const sizes = [100, 500, 1000, 5000, 10000];
-    const repeat = 500;
+    const sizes = [
+        100, 2000, 4000, 6000, 8000, 10000
+    ];
+
+    const repeat = 5000;
     let iterTimes = [];
     let rekTimes = [];
 
     for (let n of sizes) {
         const dummy = Array.from({ length: n }, () => Math.random() * 10);
 
-        // Iteratif
+        // ITERATIF
         let start = performance.now();
-        for (let i = 0; i < repeat; i++) rataIteratif(dummy);
+        for (let i = 0; i < repeat; i++) {
+            rataIteratif(dummy);
+        }
         iterTimes.push((performance.now() - start) / repeat);
 
-        // Rekursif (AMAN)
+        // REKURSIF (Divide & Conquer)
         start = performance.now();
-        for (let i = 0; i < repeat; i++) rataRekursif(dummy);
+        for (let i = 0; i < repeat; i++) {
+            rataRekursif(dummy);
+        }
         rekTimes.push((performance.now() - start) / repeat);
     }
 
