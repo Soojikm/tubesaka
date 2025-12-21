@@ -20,13 +20,13 @@ body {
 .container h2 {
   font-size: 36px;
   font-weight: 600;
-  color: #363c40;
+  color: #0b0707;
   margin-bottom: 12px;
 }
 
 .subtitle {
   font-size: 14px;
-  color: #363c40;
+  color: #0b0707;
   margin-top: 50px;
   margin-bottom: 23px;
 }
@@ -51,15 +51,31 @@ body {
 }
 
 /* page 2 */
-.hitungrekursifiteratif.before {
-  text-align: center;
+body.after-click {
+  background-color: #f7fbfd;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 50px;
+}
+
+.hitungrekursifiteratif .mainContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  justify-content: space-between;
+  max-width: 1200px;
+  /* gap: 100px; */
+  width: 100%;
+  margin: 0 auto;
+  /* align-items: flex-start; */
 }
 
 .hitungrekursifiteratif h2 {
   font-size: 36px;
   font-weight: 600;
   color: #0b0707;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .inputHari {
@@ -70,7 +86,7 @@ body {
   border-bottom: 2px solid #ff4949;
   outline: none;
   background-color: #f7fbfd;
-  margin-bottom: 100px;
+  margin-bottom: 15px;
 }
 
 .inputHari::placeholder {
@@ -87,7 +103,7 @@ body {
   background-color: #dc0909;
   color: #f7fbfd;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .fixButton:hover {
@@ -115,7 +131,7 @@ body {
 }
 
 .textLabel {
-  text-align: center;
+  align-items: flex-start;
 }
 
 .jamTidur {
@@ -138,6 +154,7 @@ body {
   color: #f7fbfd;
   cursor: pointer;
   transition: 0.2s;
+  margin-top: 15px;
 }
 
 .countAndCompare:hover {
@@ -148,27 +165,7 @@ body {
   background-color: #a30606;
 }
 
-.fix {
-  display: inline;
-}
-
-.hitungrekursifiteratif.after .mainContent {
-  display: flex;
-  gap: 32px;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  gap: 100px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.hitungrekursifiteratif.after .firstContent {
-  display: inline;
-  width: 45%;
-}
-
-.hitungrekursifiteratif.after .secContent {
-  width: 55%;
-  display: block;
+canvas {
+  width: 600px;
+  height: 300px;
 }
