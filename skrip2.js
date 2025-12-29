@@ -22,7 +22,6 @@ function buatInput() {
     return;
   }
 
-  // AUTO DUMMY kalau n besar
   const data = document.getElementById("infoDummy");
   if (n >= 20) {
     data.innerHTML = `<b>Mode data dummy aktif</b> (${n} hari)`;
@@ -37,7 +36,7 @@ function buatInput() {
     return;
   } else {
     data.style.display = "none";
-    // Manual
+    
     for (let i = 0; i < n; i++) {
       div.innerHTML += `
     <div class="field">
@@ -81,7 +80,7 @@ function rataIteratif(arr) {
 }
 
 /* =========================
-   REKURSIF AMAN (DIVIDE & CONQUER)
+   REKURSIF (DIVIDE & CONQUER)
 ========================= */
 function sumRekursifDC(arr, kiri, kanan) {
   // BASIS
@@ -149,7 +148,7 @@ function grafikIteratifVsRekursif() {
     for (let i = 0; i < repeat; i++) rataIteratif(dummy);
     iterTimes.push((performance.now() - start) / repeat);
 
-    // Rekursif (AMAN)
+    // Rekursif
     start = performance.now();
     for (let i = 0; i < repeat; i++) rataRekursif(dummy);
     rekTimes.push((performance.now() - start) / repeat);
